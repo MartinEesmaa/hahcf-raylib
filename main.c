@@ -19,6 +19,8 @@ int main(void)
     Texture2D boy = LoadTextureFromImage(boy1);
     UnloadImage(boy1);
 
+    Font heyarnold = LoadFont("font/ARNORG__.TTF");
+
     while (!WindowShouldClose())
     {
         BeginDrawing();
@@ -26,13 +28,18 @@ int main(void)
         DrawTexture(background, 0, 0, WHITE);
         DrawTexture(girl, 0, GetScreenHeight() - 350, WHITE);
         DrawTexture(boy, GetScreenWidth() - 188, GetScreenHeight() - 400, WHITE);
-        DrawText("Helga's Cheese Festival", 100, 50, 50, WHITE);
+        DrawTextEx(heyarnold, "Helga's Cheese Festival", (Vector2){ 100, 50 }, 72, 0, YELLOW);
         DrawText("raylib version by Martin Eesmaa", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
+        DrawRectangle(300, 200, 200, 100, PINK);
+        DrawRectangle(300, 325, 200, 100, PINK);
+        DrawText("Start", 350, 230, 40, BLACK);
+        DrawText("Quit", 350, 350, 40, BLACK);
         EndDrawing();
     }
     UnloadTexture(background);
     UnloadTexture(girl);
     UnloadTexture(boy);
+    UnloadFont(heyarnold);
     CloseWindow();
     return 0;
 }
