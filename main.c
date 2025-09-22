@@ -30,6 +30,9 @@ int main(void)
         DrawText("raylib version by Martin Eesmaa", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
         EndDrawing();
     }
+    UnloadTexture(background);
+    UnloadTexture(girl);
+    UnloadTexture(boy);
     CloseWindow();
     return 0;
 }
