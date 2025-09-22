@@ -9,10 +9,25 @@ int main(void)
     SetTargetFPS(60);
     while (!WindowShouldClose())
     {
+        Texture2D background = LoadTexture("img/gback.png");
+        
+        Image girl1 = LoadImage("img/girl1.png");
+        ImageResize(&girl1, 188, 350);
+        Texture2D girl = LoadTextureFromImage(girl1);
+        UnloadImage(girl1);
+
+        Image boy1 = LoadImage("img/boy1.png");
+        ImageResize(&boy1, 188, 400);
+        Texture2D boy = LoadTextureFromImage(boy1);
+        UnloadImage(boy1);
+
         BeginDrawing();
         ClearBackground(BLACK);
-        const char *comingsoon = "Coming soon... (Martin Eesmaa)";
-        DrawText(comingsoon, screenWidth / 2 - MeasureText(comingsoon, 20) / 2, screenHeight / 2 - 10, 20, WHITE);
+        DrawTexture(background, 0, 0, WHITE);
+        DrawTexture(girl, 0, GetScreenHeight() - 350, WHITE);
+        DrawTexture(boy, GetScreenWidth() - 188, GetScreenHeight() - 400, WHITE);
+        DrawText("Helga's Cheese Festival", 100, 50, 50, WHITE);
+        DrawText("raylib version by Martin Eesmaa", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
         EndDrawing();
     }
     CloseWindow();
