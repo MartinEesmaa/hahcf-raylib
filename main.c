@@ -15,7 +15,7 @@ int main(void)
     UnloadImage(girl1);
 
     Image boy1 = LoadImage("img/boy1.png");
-    ImageResize(&boy1, 188, 400);
+    ImageResize(&boy1, 250, 400);
     Texture2D boy = LoadTextureFromImage(boy1);
     UnloadImage(boy1);
 
@@ -27,7 +27,7 @@ int main(void)
         ClearBackground(BLACK);
         DrawTexture(background, 0, 0, WHITE);
         DrawTexture(girl, 0, GetScreenHeight() - 350, WHITE);
-        DrawTexture(boy, GetScreenWidth() - 188, GetScreenHeight() - 400, WHITE);
+        DrawTexture(boy, GetScreenWidth() - 250, GetScreenHeight() - 400, WHITE);
         DrawTextEx(heyarnold, "Helga's Cheese Festival", (Vector2){ 100, 50 }, 72, 0, YELLOW);
         DrawText("raylib version by Martin Eesmaa", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
         DrawRectangle(300, 200, 200, 100, PINK);
