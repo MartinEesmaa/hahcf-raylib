@@ -34,6 +34,27 @@ int main(void)
         DrawRectangle(300, 325, 200, 100, PINK);
         DrawText("Start", 350, 230, 40, BLACK);
         DrawText("Quit", 350, 350, 40, BLACK);
+
+        Rectangle startbutton = { 300, 200, 200, 100 };
+        Rectangle quitbutton = { 300, 325, 200, 100 };
+
+        if(CheckCollisionPointRec(GetMousePosition(), startbutton) ||
+           CheckCollisionPointRec(GetMousePosition(), quitbutton))
+        {
+            SetMouseCursor(4);
+        }
+        else {
+            SetMouseCursor(1);
+        }
+
+        if(IsMouseButtonReleased(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), quitbutton))
+        {
+            SetMouseCursor(1);
+            break;
+        }
+
+        if(IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_RIGHT)) break;
+
         EndDrawing();
     }
     UnloadTexture(background);
