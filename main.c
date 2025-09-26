@@ -29,7 +29,7 @@ int main(void)
         DrawTexture(girl, 0, GetScreenHeight() - girl.height, WHITE);
         DrawTexture(boy, GetScreenWidth() - boy.width, GetScreenHeight() - boy.height, WHITE);
         DrawTextEx(heyarnold, "Helga's Cheese Festival", (Vector2){ 100, 50 }, 72, 0, YELLOW);
-        DrawText("raylib version by Martin Eesmaa", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
+        DrawText("raylib version by Martin Eesmaa (2025)", GetScreenWidth() / 6, GetScreenHeight() - 32, 32, WHITE);
         DrawRectangle(300, 200, 200, 100, PINK);
         DrawRectangle(300, 325, 200, 100, PINK);
         DrawTextEx(heyarnold, "Start", (Vector2){350, 230}, 50, 0, WHITE);
