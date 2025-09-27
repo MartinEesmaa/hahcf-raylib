@@ -47,12 +47,19 @@ int main(void)
             SetMouseCursor(1);
         }
 
+        if(IsMouseButtonReleased(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), startbutton))
+        {
+            SetMouseCursor(1);
+            begin();
+        }
+
         if(IsMouseButtonReleased(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), quitbutton))
         {
             SetMouseCursor(1);
             break;
         }
 
+        if(IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) begin();
         if(IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_RIGHT)) break;
 
         EndDrawing();
