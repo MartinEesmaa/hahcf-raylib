@@ -27,6 +27,10 @@ int begin(void)
             DrawRectangle(0, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
         }
 
+        if (timer > 8.0f) {
+            start();
+        }
+
         EndDrawing();
     }
     CloseWindow();
