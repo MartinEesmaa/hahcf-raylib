@@ -35,6 +35,22 @@ int main(void)
         DrawTextEx(heyarnold, "Start", (Vector2){350, 230}, 50, 0, WHITE);
         DrawTextEx(heyarnold, "Quit", (Vector2){350, 350}, 50, 0, WHITE);
 
+        if(IsGamepadAvailable(0)) {
+            if (TextFindIndex(TextToLower(GetGamepadName(0)), "xbox") > -1 || TextFindIndex(TextToLower(GetGamepadName(0)), "x-box") > -1)
+            {
+                DrawTextEx(heyarnold, "Press A to Play", (Vector2){ 20, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+                DrawTextEx(heyarnold, "Press B to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+            }
+            else if (TextFindIndex(GetGamepadName(0), "playstation") > - 1) {
+                DrawTextEx(heyarnold, "Press X to Play", (Vector2){ 20, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+                DrawTextEx(heyarnold, "Press O to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+            }
+            else {
+                DrawTextEx(heyarnold, "Press A to Play", (Vector2){ 20, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+                DrawTextEx(heyarnold, "Press B to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+            }
+        }
+
         Rectangle startbutton = { 300, 200, 200, 100 };
         Rectangle quitbutton = { 300, 325, 200, 100 };
 
