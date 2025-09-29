@@ -1,4 +1,5 @@
 #include "raylib.h"
+#include "typetext.h"
 
 int start(void) 
 {
@@ -10,7 +11,7 @@ int start(void)
         BeginDrawing();
         ClearBackground(BLACK);
         DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
-        DrawTextEx(atp, "Sorry, it's not implemented yet. Coming soon... - Martin Eesmaa", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        TypeTextEx(atp, "Sorry, it's not implemented yet. Coming soon... - Martin Eesmaa", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         EndDrawing();
     }
     CloseWindow();
