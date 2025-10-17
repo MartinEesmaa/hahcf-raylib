@@ -1,9 +1,32 @@
+/*
+ * Copyright (C) 2025 Martin Eesmaa
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * Video game title: Helga's Cheese Festival (raylib port version)
+ * Source code: https://github.com/MartinEesmaa/hahcf-raylib
+ */
+
 #include "raylib.h"
+
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
 
 int main(void)
 {
-    const int screenWidth = 800;
-    const int screenHeight = 600;
+    const int screenWidth = SCREEN_WIDTH;
+    const int screenHeight = SCREEN_HEIGHT;
 
     InitWindow(screenWidth, screenHeight, "Helga's Cheese Festival (Martin Eesmaa)");
     SetTargetFPS(60);
