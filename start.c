@@ -8,6 +8,9 @@ int start(void)
 
     int framesample = 0;
 
+    Texture2D CG1 = LoadTexture("chapter/CG1.png");
+    Texture2D CG2 = LoadTexture("chapter/CG2.png");
+
     while (!WindowShouldClose())
     {
         BeginDrawing();
@@ -21,9 +24,29 @@ int start(void)
         }
 
         if(framesample == 0) {
-            TypeTextEx(atp, "Sorry, it's not implemented yet. Coming soon... - Martin Eesmaa", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
-        } else if(framesample == 1) {
-            TypeTextEx(atp, "Nice it's working!", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+            TypeTextEx(atp, "So, let's just start off by saying Cheese Festivals never, ever worked out in my\n\nfavor...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        }
+        
+        if(framesample >= 1 && framesample <= 3) {
+            DrawTexture(CG1, 0, 0, WHITE);
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+        } else if (framesample >= 4 && framesample <= 6) {
+            DrawTexture(CG2, 0, 0, WHITE);
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+        }
+        
+        if(framesample == 1) {
+            TypeTextEx(atp, "I can remember...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 2) {
+            TypeTextEx(atp, "There were two of them when I was nine-years-old and both of them ended up\n\nwith me...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 3) {
+            TypeTextEx(atp, "Well, how do they put it...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 4) {
+            TypeTextEx(atp, "Forever alone.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 5) {
+            TypeTextEx(atp, "And now...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 6) {
+            TypeTextEx(atp, "It was that time of year again.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         }
 
         EndDrawing();
