@@ -14,6 +14,8 @@ int start(void)
         TypeTextEx(atp, "Sorry, it's not implemented yet. Coming soon... - Martin Eesmaa", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         EndDrawing();
     }
+    UnloadTexture(textbox);
+    UnloadFont(atp);
     CloseWindow();
     return 0;
 }
