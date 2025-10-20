@@ -16,8 +16,7 @@ int start(void)
         BeginDrawing();
         ClearBackground(BLACK);
         DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
-        const char* experimental = "Experimental version by Martin Eesmaa";
-        DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
+        const char* experimental = "Experimental raylib version by Martin Eesmaa";
 
         if(IsKeyReleased(KEY_ENTER) || IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
             framesample += 1;
@@ -33,6 +32,10 @@ int start(void)
         } else if (framesample >= 4 && framesample <= 6) {
             DrawTexture(CG2, 0, 0, WHITE);
             DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+        }
+
+        if (framesample <= 6) {
+            DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
         
         if(framesample == 1) {
