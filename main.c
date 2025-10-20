@@ -20,8 +20,13 @@
 
 #include "raylib.h"
 
+#ifdef __SWITCH__
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
+#else
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
+#endif
 
 int main(void)
 {
