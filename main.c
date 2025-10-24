@@ -28,6 +28,8 @@
 #define SCREEN_HEIGHT 600
 #endif
 
+int begin(void);
+
 int main(void)
 {
     const int screenWidth = SCREEN_WIDTH;

@@ -1,5 +1,7 @@
 #include "raylib.h"
 
+void start_game(void);
+
 int begin(void)
 {
     Font heyarnold = LoadFontEx("font/ARNORG__.TTF", 60, 0, 0);
@@ -28,7 +30,7 @@ int begin(void)
         }
 
         if (timer > 8.0f) {
-            start();
+            start_game();
         }
 
         EndDrawing();
