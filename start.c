@@ -3,7 +3,10 @@
 
 int start_game(void) 
 {
-    Texture2D textbox = LoadTexture("img/textbox.png");
+    Image textbox1 = LoadImage("img/textbox.png");
+    ImageResize(&textbox1, GetScreenWidth(), textbox1.height);
+    Texture2D textbox = LoadTextureFromImage(textbox1);
+    UnloadImage(textbox1);
     Font atp = LoadFontEx("font/All Things Pink.ttf", 29, 0, 0);
 
     int framesample = 0;
