@@ -13,6 +13,7 @@ int start_game(void)
 
     Texture2D CG1 = LoadTexture("chapter/CG1.png");
     Texture2D CG2 = LoadTexture("chapter/CG2.png");
+    Texture2D CG3 = LoadTexture("chapter/CG3.png");
 
     while (!WindowShouldClose())
     {
@@ -22,7 +23,7 @@ int start_game(void)
         const char* experimental = "Experimental raylib version by Martin Eesmaa";
 
         if(IsKeyReleased(KEY_ENTER) || IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
-            framesample += 1;
+            framesample++;
         }
 
         if(framesample == 0) {
@@ -35,9 +36,12 @@ int start_game(void)
         } else if (framesample >= 4 && framesample <= 6) {
             DrawTexture(CG2, 0, 0, WHITE);
             DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+        } else if (framesample >= 7 && framesample <= 14) {
+            DrawTexture(CG3, 0, 0, WHITE);
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
         }
 
-        if (framesample <= 6) {
+        if (framesample <= 14) {
             DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
         
@@ -53,6 +57,22 @@ int start_game(void)
             TypeTextEx(atp, "And now...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if(framesample == 6) {
             TypeTextEx(atp, "It was that time of year again.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 7) {
+            TypeTextEx(atp, "Hillwood was going to have another one.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 8) {
+            TypeTextEx(atp, "And I wasn't looking forward to it.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 9) {
+            TypeTextEx(atp, "Because I knew it would be filled with people who were happier than me.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 10) {
+            TypeTextEx(atp, "They would be having a good time, laughing...enjoying their lives.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 11) {
+            TypeTextEx(atp, "Their loves...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 12) {
+            TypeTextEx(atp, "And the one thing that made me truly happy...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 13) {
+            TypeTextEx(atp, "Well it made me so miserable every time the Festival came to town.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 14) {
+            TypeTextEx(atp, "I hate that.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         }
 
         EndDrawing();
