@@ -26,7 +26,7 @@ int start_game(void)
         }
 
         if(framesample == 0) {
-            TypeTextEx(atp, "So, let's just start off by saying Cheese Festivals never, ever worked out in my\n\nfavor...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+            TypeTextEx(atp, "So, let's just start off by saying Cheese Festivals never, ever worked out in my\nfavor...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         }
         
         if(framesample >= 1 && framesample <= 3) {
@@ -44,7 +44,7 @@ int start_game(void)
         if(framesample == 1) {
             TypeTextEx(atp, "I can remember...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if (framesample == 2) {
-            TypeTextEx(atp, "There were two of them when I was nine-years-old and both of them ended up\n\nwith me...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+            TypeTextEx(atp, "There were two of them when I was nine-years-old and both of them ended up\nwith me...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if(framesample == 3) {
             TypeTextEx(atp, "Well, how do they put it...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if(framesample == 4) {
