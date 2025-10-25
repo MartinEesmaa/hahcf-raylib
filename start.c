@@ -42,6 +42,10 @@ int start_game(void)
             DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
             DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
+        else if (framesample >= 15 && framesample <= 17) {
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+            DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
+        }
         else {
             DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
@@ -74,6 +78,12 @@ int start_game(void)
             TypeTextEx(atp, "Well it made me so miserable every time the Festival came to town.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if(framesample == 14) {
             TypeTextEx(atp, "I hate that.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 15) {
+            TypeTextEx(atp, "It really pisses me off...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 16) {
+            TypeTextEx(atp, "...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 17) {
+            TypeTextEx(atp, "......", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         }
 
         EndDrawing();
