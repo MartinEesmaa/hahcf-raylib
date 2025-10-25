@@ -30,11 +30,13 @@ int begin(void)
         }
 
         if (timer > 8.0f) {
+            UnloadFont(heyarnold);
             start_game();
         }
 
         EndDrawing();
     }
+    UnloadFont(heyarnold);
     CloseWindow();
     return 0;
 }

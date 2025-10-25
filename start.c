@@ -59,6 +59,8 @@ int start_game(void)
     }
     UnloadTexture(textbox);
     UnloadFont(atp);
+    UnloadTexture(CG1);
+    UnloadTexture(CG2);
     CloseWindow();
     return 0;
 }
