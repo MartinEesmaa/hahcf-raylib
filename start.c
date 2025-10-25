@@ -19,7 +19,6 @@ int start_game(void)
     {
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
         const char* experimental = "Experimental raylib version by Martin Eesmaa";
 
         if(IsKeyReleased(KEY_ENTER) || IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
@@ -27,21 +26,23 @@ int start_game(void)
         }
 
         if(framesample == 0) {
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
             TypeTextEx(atp, "So, let's just start off by saying Cheese Festivals never, ever worked out in my\nfavor...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         }
         
         if(framesample >= 1 && framesample <= 3) {
             DrawTexture(CG1, 0, 0, WHITE);
-            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
         } else if (framesample >= 4 && framesample <= 6) {
             DrawTexture(CG2, 0, 0, WHITE);
-            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
         } else if (framesample >= 7 && framesample <= 14) {
             DrawTexture(CG3, 0, 0, WHITE);
-            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
         }
 
-        if (framesample <= 14) {
+        if (framesample >= 1 && framesample <= 14) {
+            DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
+            DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
+        }
+        else {
             DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
         
