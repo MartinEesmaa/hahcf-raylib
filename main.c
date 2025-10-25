@@ -102,6 +102,11 @@ int main(void)
         if(IsMouseButtonReleased(MOUSE_LEFT_BUTTON) && CheckCollisionPointRec(GetMousePosition(), startbutton))
         {
             SetMouseCursor(1);
+            ClearBackground(BLACK);
+            UnloadTexture(background);
+            UnloadTexture(girl);
+            UnloadTexture(boy);
+            UnloadFont(heyarnold);
             begin();
         }
 
