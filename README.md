@@ -4,4 +4,6 @@ Raylib port of Helga's Cheese Festival fan-based inspired of Hey Arnold by Marti
 
 Coming soon!
 
+![preview](preview.png)
+
 - Martin Eesmaa
