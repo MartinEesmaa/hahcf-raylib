@@ -11,9 +11,21 @@ int start_game(void)
 
     int framesample = 0;
 
-    Texture2D CG1 = LoadTexture("chapter/CG1.png");
-    Texture2D CG2 = LoadTexture("chapter/CG2.png");
-    Texture2D CG3 = LoadTexture("chapter/CG3.png");
+    Image CG1temp = LoadImage("chapter/CG1.png");
+    Image CG2temp = LoadImage("chapter/CG2.png");
+    Image CG3temp = LoadImage("chapter/CG3.png");
+
+    ImageResize(&CG1temp, GetScreenWidth(), GetScreenHeight());
+    ImageResize(&CG2temp, GetScreenWidth(), GetScreenHeight());
+    ImageResize(&CG3temp, GetScreenWidth(), GetScreenHeight());
+
+    Texture2D CG1 = LoadTextureFromImage(CG1temp);
+    Texture2D CG2 = LoadTextureFromImage(CG2temp);
+    Texture2D CG3 = LoadTextureFromImage(CG3temp);
+
+    UnloadImage(CG1temp);
+    UnloadImage(CG2temp);
+    UnloadImage(CG3temp);
 
     while (!WindowShouldClose())
     {
