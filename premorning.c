@@ -274,4 +274,15 @@ int premorning(void)
 
         EndDrawing();
     }
+    UnloadTexture(textbox);
+    UnloadTexture(bghhd);
+    UnloadTexture(bgcd);
+    UnloadTexture(phoebe1);
+    UnloadTexture(phoebe2);
+    UnloadTexture(phoebe3);
+    UnloadTexture(phoebe4);
+    UnloadTexture(phoebe8);
+    UnloadTexture(phoebe12);
+    UnloadFont(atp);
+    UnloadFont(ch_name);
 }
