@@ -9,6 +9,8 @@ modify_source_code() {
     cp -rf font romfs
     cp -rf img romfs
     cp -rf chapter romfs
+    cp -rf background romfs
+    cp -rf character romfs
 
     if [ ! -d "source" ]; then
         mkdir source
@@ -18,6 +20,8 @@ modify_source_code() {
     sed -i 's|img/|romfs:/img/|g' source/*.c
     sed -i 's|font/|romfs:/font/|g' source/*.c
     sed -i 's|chapter/|romfs:/chapter/|g' source/*.c
+    sed -i 's|background/|romfs:/background/|g' source/*.c
+    sed -i 's|character/|romfs:/character/|g' source/*.c
 }
 
 clean_build() {

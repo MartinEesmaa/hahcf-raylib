@@ -1,6 +1,8 @@
 #include "raylib.h"
 #include "typetext.h"
 
+int premorning(void);
+
 int start_game(void) 
 {
     Image textbox1 = LoadImage("img/textbox.png");
@@ -96,6 +98,14 @@ int start_game(void)
             TypeTextEx(atp, "...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if(framesample == 17) {
             TypeTextEx(atp, "......", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if(framesample == 18) {
+            ClearBackground(BLACK);
+            UnloadTexture(CG1);
+            UnloadTexture(CG2);
+            UnloadTexture(CG3);
+            UnloadTexture(textbox);
+            UnloadFont(atp);
+            premorning();
         }
 
         EndDrawing();
