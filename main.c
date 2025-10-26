@@ -23,9 +23,11 @@
 #ifdef __SWITCH__
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
+#define PATCH_FIX 200
 #else
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
+#define PATCH_FIX 0
 #endif
 
 int begin(void);
@@ -62,12 +64,12 @@ int main(void)
         DrawTexture(background, 0, 0, WHITE);
         DrawTexture(girl, 0, GetScreenHeight() - girl.height, WHITE);
         DrawTexture(boy, GetScreenWidth() - boy.width, GetScreenHeight() - boy.height, WHITE);
-        DrawTextEx(heyarnold, "Helga's Cheese Festival", (Vector2){ 100, 50 }, heyarnold.baseSize, 0, YELLOW);
-        DrawText("raylib version by Martin Eesmaa (2025)", 32 + 38, GetScreenHeight() - 32, 32, WHITE);
-        DrawRectangle(300, 200, 200, 100, PINK);
-        DrawRectangle(300, 325, 200, 100, PINK);
-        DrawTextEx(heyarnold, "Start", (Vector2){350, 230}, 50, 0, WHITE);
-        DrawTextEx(heyarnold, "Quit", (Vector2){350, 350}, 50, 0, WHITE);
+        DrawTextEx(heyarnold, "Helga's Cheese Festival", (Vector2){ 100 + PATCH_FIX, 50 }, heyarnold.baseSize, 0, YELLOW);
+        DrawText("raylib version by Martin Eesmaa (2025)", 32 + 38 + PATCH_FIX, GetScreenHeight() - 32, 32, WHITE);
+        DrawRectangle(300 + PATCH_FIX, 200, 200, 100, PINK);
+        DrawRectangle(300 + PATCH_FIX, 325, 200, 100, PINK);
+        DrawTextEx(heyarnold, "Start", (Vector2){350 + PATCH_FIX, 230}, 50, 0, WHITE);
+        DrawTextEx(heyarnold, "Quit", (Vector2){350 + PATCH_FIX, 350}, 50, 0, WHITE);
 
         if(IsGamepadAvailable(0)) {
             if (TextFindIndex(TextToLower(GetGamepadName(0)), "xbox") > -1 || TextFindIndex(TextToLower(GetGamepadName(0)), "x-box") > -1)
@@ -85,8 +87,8 @@ int main(void)
             }
         }
 
-        Rectangle startbutton = { 300, 200, 200, 100 };
-        Rectangle quitbutton = { 300, 325, 200, 100 };
+        Rectangle startbutton = { 300 + PATCH_FIX, 200, 200, 100 };
+        Rectangle quitbutton = { 300 + PATCH_FIX, 325, 200, 100 };
 
         if(CheckCollisionPointRec(GetMousePosition(), startbutton) ||
            CheckCollisionPointRec(GetMousePosition(), quitbutton))
