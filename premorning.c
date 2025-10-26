@@ -17,6 +17,11 @@ int premorning(void)
     Texture2D bghhd = LoadTextureFromImage(bghhd1);
     UnloadImage(bghhd1);
 
+    Image bgcd1 = LoadImage("background/BG City Day.png");
+    ImageResize(&bgcd1, GetScreenWidth(), GetScreenHeight());
+    Texture2D bgcd = LoadTextureFromImage(bgcd1);
+    UnloadImage(bgcd1);
+
     Texture2D phoebe1 = LoadTexture("character/phoebe/Phoebe 1.png");
     Texture2D phoebe2 = LoadTexture("character/phoebe/Phoebe 2.png");
     Texture2D phoebe3 = LoadTexture("character/phoebe/Phoebe 3.png");
@@ -41,6 +46,8 @@ int premorning(void)
 
         if(framesample >= 20 && framesample <= 72) {
             DrawTexture(bghhd, 0, 0, WHITE);
+        } else if(framesample >= 73 && framesample <= 87) {
+            DrawTexture(bgcd, 0, 0, WHITE);
         }
 
         if(framesample >= 22 && framesample <= 28) {
@@ -61,6 +68,8 @@ int premorning(void)
             DrawTexture(phoebe12, GetScreenWidth() - phoebe2.width * 2, GetScreenHeight() - phoebe12.height, WHITE);
         } else if (framesample >= 67 && framesample <= 72) {
             DrawTexture(phoebe3, GetScreenWidth() - phoebe2.width * 2, GetScreenHeight() - phoebe12.height, WHITE);
+        } else if (framesample >= 83 && framesample <= 87) {
+            DrawTexture(phoebe4, GetScreenWidth() - phoebe2.width * 2, GetScreenHeight() - phoebe12.height, WHITE);
         }
 
         if (framesample >= 19 && framesample <= 300) {
@@ -179,6 +188,36 @@ int premorning(void)
             TypeTextEx(atp, "I had heard this all before, multiple times in fact.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
         } else if (framesample == 72) {
             TypeTextEx(atp, "...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 73) {
+            TypeTextEx(atp, "Even if I sat her down to explain the insanity of my emotions...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 74) {
+            TypeTextEx(atp, "She just couldn't understand how hard that was for me, to put him aside.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 75) {
+            TypeTextEx(atp, "She would never understand how most of the time he felt like the only good part in my whole life...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 76) {
+            TypeTextEx(atp, "The light in my otherwise bleak existence.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 77) {
+            TypeTextEx(atp, "But at the very same time, that damn Football Head could ruin me with a smile...", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 78) {
+            TypeTextEx(atp, "Especially if that smile was aimed at someone other than me.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 79) {
+            TypeTextEx(atp, "And almost always, it was.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 80) {
+            TypeTextEx(atp, "You don't get it.", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 81) {
+            TypeTextEx(atp, "What?", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 82) {
+            TypeTextEx(atp, "It's not that easy...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 83) {
+            TypeTextEx(atp, "Helga...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 84) {
+            TypeTextEx(atp, "Ugh, don't pity me Phoebe.", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 85) {
+            TypeTextEx(atp, "My warning didn't matter, she gives me a pitiful look anyway.", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 86) {
+            TypeTextEx(atp, "I'm used to it now.", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 87) {
+            TypeTextEx(atp, "I know...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
         }
 
         if (framesample >= 20 && framesample <= 21) {
@@ -218,6 +257,18 @@ int premorning(void)
         } else if (framesample >= 64 && framesample <= 67) {
             DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
         } else if (framesample == 72) {
+            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample == 80) {
+            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample == 81) {
+            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample == 82) {
+            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample == 83) {
+            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample == 84) {
+            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
+        } else if (framesample >= 86 && framesample <= 87) {
             DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
         }
 
