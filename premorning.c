@@ -220,56 +220,24 @@ int premorning(void)
             TypeTextEx(atp, "I know...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
         }
 
-        if (framesample >= 20 && framesample <= 21) {
+        if (framesample >= 20 && framesample <= 21 ||
+            framesample == 26 || framesample == 30 ||
+            framesample >= 36 && framesample <= 39 ||
+            framesample == 46 || framesample == 49 ||
+            framesample >= 52 && framesample <= 53 ||
+            framesample == 55 || framesample >= 57 && framesample <= 58 ||
+            framesample >= 60 && framesample <= 61 || 
+            framesample == 72 || framesample == 80 || 
+            framesample == 82 || framesample == 84 ||
+            framesample >= 86 && framesample <= 87 )
+        {
             DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 25) {
+        } else if (framesample == 25 || framesample == 29 ||
+            framesample == 31 || framesample == 45 ||
+            framesample == 51 || framesample == 54 ||
+            framesample == 62 || framesample >= 64 && framesample <= 67 ||
+            framesample == 81 || framesample == 83) {
             DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 26) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 29) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 30) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 31) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 36 && framesample <= 39) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 45) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 46) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 49) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 51) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 52 && framesample <= 53) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 54) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 55) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 57 && framesample <= 58) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 60 && framesample <= 61) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 62) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 64 && framesample <= 67) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 72) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 80) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 81) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 82) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 83) {
-            DrawTextEx(ch_name, "Phoebe", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample == 84) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
-        } else if (framesample >= 86 && framesample <= 87) {
-            DrawTextEx(ch_name, "Helga", (Vector2){ 20, GetScreenHeight() - textbox.height + 20 }, ch_name.baseSize, 0, PINK);
         }
 
         EndDrawing();
