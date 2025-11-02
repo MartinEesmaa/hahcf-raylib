@@ -45,7 +45,7 @@ trap handle_cancel INT TERM
 
 modify_source_code
 
-if ! make PLATFORM=PLATFORM_NX; then
+if ! make APP_TITLE="Helga's Cheese Festival (raylib version by Martin Eesmaa)" APP_AUTHOR=MartinEesmaa APP_VERSION="0.0.1"; then
     echo "Make vigu. Tagasi..."
     clean_build
 fi
