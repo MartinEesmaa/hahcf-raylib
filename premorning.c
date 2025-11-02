@@ -1,6 +1,8 @@
 #include "raylib.h"
 #include "typetext.h"
 
+int prebump(void);
+
 int premorning(void)
 {
     Image textbox1 = LoadImage("img/textbox.png");
@@ -72,7 +74,7 @@ int premorning(void)
             DrawTexture(phoebe4, GetScreenWidth() - phoebe2.width * 2, GetScreenHeight() - phoebe12.height, WHITE);
         }
 
-        if (framesample >= 19 && framesample <= 300) {
+        if (framesample >= 19 && framesample <= 87) {
             DrawTexture(textbox, 0, GetScreenHeight() - textbox.height, WHITE);
             DrawText(experimental, GetScreenWidth() - MeasureText(experimental, 20), 0, 20, WHITE);
         }
@@ -218,6 +220,9 @@ int premorning(void)
             TypeTextEx(atp, "I'm used to it now.", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
         } else if (framesample == 87) {
             TypeTextEx(atp, "I know...", (Vector2){ 20, GetScreenHeight() - textbox.height + 50 }, atp.baseSize, 0, WHITE);
+        } else if (framesample == 88) {
+            ClearBackground(BLACK);
+            prebump();
         }
 
         if (framesample >= 20 && framesample <= 21 ||
