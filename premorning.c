@@ -37,7 +37,8 @@ int premorning(void)
         ClearBackground(BLACK);
         const char* experimental = "Experimental raylib version by Martin Eesmaa";
 
-        if(IsKeyReleased(KEY_ENTER) || IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN)) {
+        if(IsKeyReleased(KEY_ENTER) || IsGamepadButtonReleased(0, GAMEPAD_BUTTON_RIGHT_FACE_DOWN) || 
+           IsKeyReleased(KEY_SPACE) || IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) {
             framesample++;
         }
 
