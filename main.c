@@ -82,8 +82,8 @@ int main(void)
                 DrawTextEx(heyarnold, "Press O to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
             }
             else {
-                DrawTextEx(heyarnold, "Press A to Play", (Vector2){ 20, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
-                DrawTextEx(heyarnold, "Press B to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+                DrawTextEx(heyarnold, "Press A/X to Play", (Vector2){ 20, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
+                DrawTextEx(heyarnold, "Press B/O to Quit", (Vector2){ GetScreenWidth() / 2 + 50, GetScreenHeight() - 50 - 40}, 50, 0, WHITE);
             }
         }
 
